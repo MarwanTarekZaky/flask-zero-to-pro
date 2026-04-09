@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Flask Zero to Pro{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Global Navigation -->
+    <header>
+      <h1>Welcome to My Flask App</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('main.home') }}">Home</a></li>
+          <li><a href="{{ url_for('main.about') }}">About</a></li>
+          <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main Page Content -->
+    <main>
+      {% block content %}
+      <!-- Content will be injected here -->
+      {% endblock %}
+    </main>
+    <!-- Global Footer -->
+    <footer>
+      <p>&copy; {{year}} Flask Zero to Pro. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
