@@ -1,0 +1,1 @@
+![License: Personal & Non‑Commercial](https://img.shields.io/badge/License-Personal--NonCommercial-yellow.svg)
