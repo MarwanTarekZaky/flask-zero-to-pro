@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}Form Example{% endblock %}
+
+{% block content %}
+<h1>Form Example</h1>
+
+<form method="POST">
+    <label>Username</label>
+    <input type="text" name="username" required>
+    <button type="submit">Submit</button>
+</form>
+
+{% if username %}
+    <p>You submitted: <strong>{{ username }}</strong></p>
+{% endif %}
+{% endblock %}
